@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="headerID">
+      <a href="#" class="headerTitle"
+        >Portfol<span class="highlight">io</span></a
+      >
+      <i class="bx bx-menu" id="menu"></i>
+      <nav class="headerLinks">
+        <a href="#Home">Hem</a>
+        <a href="#About">Om mig</a>
+        <a href="#Project">Projekt</a>
+        <a href="#Contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <section id="Home">
+      <div class="homeText">
+        <h1>Hej, jag heter <span class="name">Aron Renström</span></h1>
+
+        <h3>Välkommen till min <span class="highlight">portfölj!</span></h3>
+
+        <div class="icons-container">
+          <a href="https://www.facebook.com/aron.renstrom"
+            ><i class="bx bxl-facebook-circle" id="icon"></i
+          ></a>
+          <a href="https://www.instagram.com/aronrenstrom/"
+            ><i class="bx bxl-instagram" id="icon"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/aron-renstrom-049122216/"
+            ><i class="bx bxl-linkedin-square" id="icon"></i
+          ></a>
+          <a href="mailto:aronrenstrom@outlook.com" id="icon">
+            <i class="bx bx-envelope"></i>
+          </a>
+          <a href="tel:+46703616463"><i class="bx bxs-phone" id="icon"></i></a>
+
+          <a href="CV.pdf" class="btn"
+            >Mitt CV<i class="bx bxs-download"></i
+          ></a>
+        </div>
+      </div>
+      <img src="bild13.png" class="startPhoto" />
+    </section>
+
+    <section id="About">
+      <div class="flex-container">
+        <div class="text-container">
+          <h1>
+            <hr />
+            Kort
+            <span class="highlight">om mig</span>
+          </h1>
+          <p>
+            Jag heter Aron Renström och läser tredje året på
+            civilingenjörutbildningen interaktion och design på Umeå
+            universitet. Jag bor på lilljansberget tillsammans med min flickvän
+            och min lilla valp Mango.
+          </p>
+          <h2>Intressen</h2>
+          <p>
+            Mina intressen består av att spendera tid med min flickvän och våran
+            lilla fyrbenta kompis. Utöver detta gillar jag även att träna i
+            olika former, allt från gym till att spela golf.
+          </p>
+          <h2>Ambitioner</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe,
+            enim maxime consequatur molestiae, doloribus natus quae eius impedit
+            magni quaerat ducimus quibusdam explicabo tenetur nulla.
+          </p>
+        </div>
+        <div class="image-container">
+          <img class="mySlides" src="bild4.jpg" />
+          <img class="mySlides" src="bild5.jpeg" />
+          <img class="mySlides" src="bild1.jpeg" />
+          <img class="mySlides" src="bild6.jpg" />
+          <img class="mySlides" src="bild2.JPG" />
+          <img class="mySlides" src="bild7.jpg" />
+          <img class="mySlides" src="Bild8.jpeg" />
+        </div>
+      </div>
+    </section>
+
+    <section id="Skills">
+      <div class="skills_container">
+        <h2>Mina <span class="highlight">färdigheter</span></h2>
+        <p class="skills_text">
+          Detta är några av de färdigheter som jag samlat på mig under
+          programmet
+        </p>
+        <a href="#Project" class="btn">Se projekt</a>
+      </div>
+      <div class="skills_content">
+        <ol class="skills_group">
+          <li class="skills_item">C</li>
+          <li class="skills_item">C#</li>
+          <li class="skills_item">ASP NET, MVC</li>
+          <li class="skills_item">HTML, CSS</li>
+          <li class="skills_item">JAVASCRIPT</li>
+          <li class="skills_item">JAVA</li>
+          <li class="skills_item">Python</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="Project">
+      <h1 class="h1-projects">Mina <span class="highlight">Projekt</span></h1>
+      <div class="project-flexbox">
+        <div class="project1">
+          <p class="projectText">Memory i AR</p>
+          <img src="Bild16.png" />
+        </div>
+        <div class="project1">
+          <p class="projectText">Ararat Pizzeria</p>
+          <a onclick="openPopup()"> <img src="Bild15.png""> </a>
+          <div class="popup" id="popup">
+            <div popup-container>
+              <button onclick="closePopup()" class="close-button">X</button>
+              <h2>
+                Hemsida för restaurang
+                <span class="highlight">Ararat Pizzera</span>
+              </h2>
+              <p>
+                Byggde om Ararat Pizzeria och Grills hemsida. Detta gjordes i
+                Wordpress.
+              </p>
+              <p>Nedan visas resultat</p>
+              <video id="video" controls>
+                <source src="Film1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="project1">
+          <p class="projectText">Kommer snart</p>
+          <img src="Bild17.png" />
+        </div>
+      </div>
+    </section>
+
+    <section id="Contact">
+      <h1 class="h1-contact"><span class="highlight">Kontakta</span> mig</h1>
+      <p class="contact_text">Tveka inte att höra av dig!</p>
+
+      <div class="contact-flex">
+        <div class="information">
+          <a
+            href="mailto:aronrenstrom@outlook.com"
+            id="icon"
+            style="font-size: 20px"
+          >
+            <i
+              class="bx bx-envelope"
+              style="
+                display: inline-block;
+                margin-right: 5px;
+                padding-bottom: 10px;
+              "
+            ></i
+            >aronrenstrom@outlook.com </a
+          ><br />
+
+          <a href="tel:+46703616463" id="icon" style="font-size: 20px">
+            <i
+              class="bx bxs-phone"
+              style="display: inline-block; margin-right: 5px"
+            ></i
+            >070 - 361 64 63
+          </a>
+
+          <div class="iconsContact">
+            <a href="https://www.facebook.com/aron.renstrom"
+              ><i class="bx bxl-facebook-circle" id="icon"></i
+            ></a>
+            <a href="https://www.instagram.com/aronrenstrom/"
+              ><i class="bx bxl-instagram" id="icon"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/aron-renstrom-049122216/"
+              ><i class="bx bxl-linkedin-square" id="icon"></i
+            ></a>
+          </div>
+
+          <a href="CV.pdf" class="btn"
+            >Mitt CV<i class="bx bxs-download"></i
+          ></a>
+        </div>
+
+        <div class="contact_container container grid">
+          <form
+            action="process_form.php"
+            class="contact_form"
+            id="contact-form"
+            method="post"
+          >
+            <div class="contact_group">
+              <input
+                type="text"
+                name="user_name"
+                required
+                placeholder="Förnamn Efternamn"
+                class="contact_input"
+              />
+              <input
+                type="text"
+                name="user_Co"
+                required
+                placeholder="Företagsnamn"
+                class="contact_input"
+              />
+              <input
+                type="email"
+                name="user_email"
+                required
+                placeholder="Email"
+                class="contact_input"
+              />
+            </div>
+            <textarea
+              name="user_project"
+              required
+              placeholder="Skriv meddelande här..."
+              class="contact_input"
+            ></textarea>
+            <p class="contact_message" id="contact-message"></p>
+
+            <button type="submit" class="btn contact_button">Skicka</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 20000);
+      }
+    </script>
+
+    <script>
+      let popup = document.getElementById("popup");
+
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+
+      function closePopup() {
+        var video = document.getElementById("video");
+        video.pause();
+        var popup = document.getElementById("popup");
+        popup.classList.remove("open-popup");
+      }
+    </script>
+  </body>
+  <script src="script.js"></script>
+</html>
