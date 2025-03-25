@@ -33,9 +33,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* vertically center items */
+  align-items: center;
   background-color: var(--back-color1);
-  padding: 25px 15px; /* add padding for spacing */
+  padding: 25px 15px; 
   width: 100%;
 }
 
@@ -43,13 +43,13 @@ header {
   font-size: 35px;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none; /* remove underline from link */
-  color: var(--sec-color); /* change link color */
+  text-decoration: none; 
+  color: var(--sec-color); 
   padding-left: 5vh;
 }
 
 .highlight {
-  color: var(--primary-color); /* change color of highlighted text */
+  color: var(--primary-color);
 }
 
 .headerLinks {
@@ -186,7 +186,7 @@ section {
 #About {
   background-color: var(--back-color2);
   position: relative;
-  height: 80vh;
+  height: 92vh;
   width: 100%;
 }
 
@@ -204,7 +204,8 @@ section {
   justify-content: center;
   width: 80%;
   margin: auto;
-  padding-left: 140px;
+  /* padding-left: 250px; */
+  padding: auto;
   padding-bottom: 17%;
 }
 
@@ -217,11 +218,12 @@ section {
   flex: 1;
   width: 100%;
   margin: auto;
-  padding-left: 5%;
+  padding-left: 5em;
+  padding-top: 3em;
 }
 
 .image-container img {
-  width: 70%;
+  width: 75%;
 }
 
 .text-container h1 {
@@ -237,46 +239,135 @@ section {
 }
 
 .text-container p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
+  padding-bottom: 1em;
 }
 /*------------------------------*/
 
 #Skills {
   background-color: var(--back-color3);
   position: relative;
-  height: 45vh;
+  height: 92vh; 
   width: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin: 0 auto;
 }
 
-.skills_container {
+.skills_container_header h1 {
+  padding-top: 20px;
+  margin-top: 0px;
+  text-decoration: underline;
+  font-size: 34px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills_container_header {
   text-align: center;
+  width: 75%;
 }
 
-.skills_text {
-  margin-bottom: 1%;
+.skills_header_text {
+  margin-bottom: 2%;
 }
 
-.skills_content,
-.skills_group {
-  display: grid;
+.skills-flexbox-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; 
+  flex-wrap: wrap; 
+  padding: 20px;
+  width: 100%; 
+  width: 75%;
+  margin: 0 auto;
 }
 
-.skills_content {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  align-items: baseline;
+.skills_languages, .courses_group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  min-width: 250px;
 }
 
-.skills_group {
-  row-gap: 5%;
-  list-style: decimal-leading-zero;
+.skills-flexbox-container h3 {
+  font-size: 1.5rem;
+  color: var(--sec-color);
+  margin-bottom: 15px;
 }
 
-.skills_item::marker {
-  color: var(--primary-color);
+.skills_olist, .courses_olist {
+  list-style-type: decimal-leading-zero;
+  color: var(--sec-color);  
 }
+
+.skills_item {
+  font-size: 1.1rem;
+  margin-bottom: 8px; 
+}
+
+.skills_item::marker, .course_item::marker {
+  color: var(--primary-color); 
+}
+
+.course_item {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: underline;
+
+}
+
+.course_item:hover {
+  color: #f0f0f0;
+  transform: scale(1.06); 
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background: var(--back-color4);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 /*------------------------------------------------------------*/
+
+
+
 #Project {
   background-color: var(--back-color2);
 }
@@ -377,104 +468,3 @@ section {
 }
 
 /*------------------------------------------------------*/
-
-#Contact {
-  background-color: var(--back-color1);
-  width: 100%;
-  height: 89vh;
-}
-
-.h1-contact {
-  padding-top: 20px;
-  margin-top: 0px;
-  text-decoration: underline;
-  font-size: 34px;
-  margin-bottom: 10px;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-}
-
-.contact_text {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 24px;
-}
-
-.contact_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%; /* adjust width as needed */
-}
-
-.contact_form,
-.contact_group {
-  display: grid;
-  row-gap: 10px;
-}
-
-.contact_form {
-  position: relative;
-  width: 80%;
-}
-.contact_input {
-  padding: 10px 12px;
-  border-radius: 5px;
-  background-color: #fffaf0;
-}
-
-.contact_input::placeholder {
-  color: black;
-}
-
-.contact_form textarea {
-  height: 200px;
-  resize: none;
-  margin-bottom: 30px;
-}
-
-.contact_button {
-  justify-self: center;
-  cursor: pointer;
-  width: 20%;
-}
-
-.contact_message {
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-  color: var(--sec-color);
-}
-
-.information {
-  font-size: 18px;
-  width: 30%; /* adjust width as needed */
-  padding-left: 18vh;
-}
-
-.information btn {
-  padding-left: 200px;
-  margin-left: 3000px;
-}
-
-#infoIcon {
-  color: var(--primary-color);
-  position: relative;
-}
-
-.contact-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.iconsContact {
-  margin-left: 9px;
-  margin-bottom: 10px;
-  padding-top: 50px;
-}
-
-/*----------------------------------------------------*/
