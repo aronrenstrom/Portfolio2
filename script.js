@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             myIndex = 1;
         }
         pics[myIndex - 1].style.display = "block";
-        setTimeout(rotatePictures, 20000);
+        setTimeout(rotatePictures, 15000);
     }
 });
 
@@ -129,16 +129,51 @@ const courseInfo = {
   });
   
 
-  // Trejde scriptet för popup-hantering-----------------------------------------------------
-    let popup = document.getElementById("popup");
+  let disable = false; 
 
-    function openPopup() {
+// Trejde scriptet för popup-hantering-----------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+  // Hitta alla popup-knappar och popup-fönster
+  let openPopupBtns = document.querySelectorAll("[id^='open-popup-btn']");
+  let closePopupBtns = document.querySelectorAll("[id^='close-popup-btn']");
+  let popups = document.querySelectorAll("[id^='popup']");
+
+  // Funktion för att öppna popup
+  function openPopup(popupId) {
+    let popup = document.getElementById(popupId);
     popup.classList.add("open-popup");
-    }
+  }
 
-    function closePopup() {
-    var video = document.getElementById("video");
-    video.pause();
-    var popup = document.getElementById("popup");
-    popup.classList.remove("open-popup");
+  // Funktion för att stänga popup
+  function closePopup(popupId) {
+    let popup = document.getElementById(popupId);
+    let video = popup.querySelector("video");
+    if (video) {
+      video.pause(); // Pausa videon när popup stängs
     }
+    popup.classList.remove("open-popup");
+  }
+
+  // Lägg till event-lyssnare för alla "open-popup-btn"-knappar
+  openPopupBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      // Kontrollera om en popup redan är öppen, om så är fallet, stäng den först
+      if (disable) {
+        return; // Om en popup är uppe, gör inget när man försöker öppna en annan
+      }
+
+      let popupId = btn.id.replace("open-popup-btn", "popup");
+      openPopup(popupId);
+      disable = true; // Markera att en popup är öppen
+    });
+  });
+
+  // Lägg till event-lyssnare för alla "close-popup-btn"-knappar
+  closePopupBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      let popupId = btn.id.replace("close-popup-btn", "popup");
+      closePopup(popupId);
+      disable = false; // Sätt disable till false när popupen stängs
+    });
+  });
+});

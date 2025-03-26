@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
 
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -101,14 +100,14 @@
           <img class="mySlides" src="Images/bild20.jpg" />
           <img class="mySlides" src="Images/bild7.jpg" />
           <img class="mySlides" src="Images/bild22.jpeg" />
+          <img class="mySlides" src="Images/Bild8.jpeg" />
+          <img class="mySlides" src="Images/bild6.jpg" />
           <img class="mySlides" src="Images/bild18.jpg" />
           <img class="mySlides" src="Images/bild23.jpeg" />
           <img class="mySlides" src="Images/bild4.jpg" />
           <img class="mySlides" src="Images/bild5.jpeg" />
           <img class="mySlides" src="Images/bild1.jpeg" />
-          <img class="mySlides" src="Images/bild6.jpg" />
           <img class="mySlides" src="Images/bild2.JPG" />
-          <img class="mySlides" src="Images/Bild8.jpeg" />
         </div>
       </div>
     </section>
@@ -132,9 +131,9 @@
             <li class="skills_item">.NET</li>
             <li class="skills_item">HTML, CSS</li>
             <li class="skills_item">JAVASCRIPT</li>
+            <li class="skills_item">React Native</li>
             <li class="skills_item">JAVA</li>
             <li class="skills_item">Python</li>
-            <li class="skills_item">React Native</li>
             <li class="skills_item">REST API</li>
             <li class="skills_item">SQL databas</li>
             <li class="skills_item">Swift</li>
@@ -191,33 +190,135 @@
     <section id="Project">
       <h1 class="h1-projects">Mina <span class="highlight">Projekt</span></h1>
       <div class="project-flexbox">
-        <div class="project1">
-          <p class="projectText">Memory AR spel</p>
-          <a onclick="openPopup()"> <img src="Images/Bild15.png" /> </a>
-          <div class="popup" id="popup">
-            <div popup-container>
-              <button onclick="closePopup()" class="close-button">X</button>
+        <div class="project-item">
+          <p class="projectText">AR Memory</p>
+          <a id="open-popup-btn-1"> <img src="Images/Bild16.png" /> </a>
+          <div class="popup" id="popup-1">
+            <div class="popup-container">
+              <button id="close-popup-btn-1" class="close-button">X</button>
               <h2>
-                Hemsida för restaurang
-                <span class="highlight">Ararat Pizzera</span>
+                <span class="highlight">AR Memory</span>
+                spel
               </h2>
               <p>
-                Byggde om Ararat Pizzeria och Grills hemsida. Detta gjordes i
-                Wordpress.
+                AR Memory spel utvecklat tillsammans med Thnx Innovatations.
+                Utvecklat med hjälp av C#, Unity, SQL-databas, REST API med
+                ASP.NET Core
               </p>
               <p>Nedan visas resultat</p>
-              <video id="video" controls>
-                <source src="Images/Film1.mp4" type="video/mp4" />
+              <video id="memoryVideo" controls>
+                <source src="Images/MemoryAR.mov" type="video/mp4" />
               </video>
             </div>
           </div>
         </div>
-        <div class="project1">
+
+        <div class="project-item">
+          <p class="projectText">AI Pacman</p>
+          <a id="open-popup-btn-6"> <img src="Images/pac.png" /> </a>
+          <div class="popup" id="popup-6">
+            <div class="popup-container">
+              <button id="close-popup-btn-6" class="close-button">X</button>
+              <h2>
+                <span class="highlight">Pacman</span>
+                med olika sökalgoritmer
+              </h2>
+              <p>
+                Utvecklat ett Pacman-spel i Python där olika sökalgoritmer
+                används för att navigera genom labyrinten. Videon nedan visar
+                när sökalgoritmen A* med Manhattan-heuristik används, men
+                sökalgoritmerna BFS (Breath-First Search) DFS (Depth-First
+                Search) UCS (Uniform-Cost Search) implementerades också. Dessa
+                algoritmer hjälper Pacman att hitta den mest effektiva vägen
+                till målet beroende på olika strategier. Detta utvecklades i
+                Python.
+              </p>
+              <p>Nedan visas resultat</p>
+              <video id="pacmanVideo" controls>
+                <source src="Images/pacman.mov" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <p class="projectText">Triventure</p>
+          <a id="open-popup-btn-3"> <img src="Images/logo.png" /> </a>
+          <div class="popup" id="popup-3">
+            <div class="popup-container">
+              <button id="close-popup-btn-3" class="close-button">X</button>
+              <h2>
+                <span class="highlight">Triventure</span>
+                <em>ditt livs bästa tipsrunda!</em>
+              </h2>
+              <p>
+                Grupparbete där vi utvecklade iOS-appen Triventure, där
+                användare kan skapa eller delta i virtuella tipsrundor och tävla
+                i kategorier som geografi, musik och historia. Frågor besvaras genom att besöka
+                kartnålar inom en viss räckvidd. Appen är byggd med Swift,
+                Firebase Database och Google Maps API. OBS: Prototypen nedan är
+                Figma-designen!
+              </p>
+              <p>Nedan visas resultat</p>
+              <video id="TriventureMovie" controls>
+                <source src="Images/Triventure.mov" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <p class="projectText">Hoppspel</p>
+          <a id="open-popup-btn-2"> <img src="Images/hoppaBild.png" /> </a>
+          <div class="popup" id="popup-2">
+            <div class="popup-container">
+              <button id="close-popup-btn-2" class="close-button">X</button>
+              <h2>
+                <span class="highlight">Hoppspel</span>
+                utvecklat i Python
+              </h2>
+              <p>
+                Utvecklade ett hoppspel där användaren ska hoppa på plattformar
+                för att ta sig uppåt och samla mynt. Spelet utvecklades i Python
+                och använder sig utav en SQL databas för datasparning samt ett
+                REST API skrivet med hjälp av .NET och C#.
+              </p>
+              <p>Nedan visas resultat</p>
+              <video id="hoppVideo" controls>
+                <source src="Images/hoppa.mov" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <p class="projectText">Elbilsapp</p>
+          <a id="open-popup-btn-4"> <img src="Images/Iter_bild.png" /> </a>
+          <div class="popup" id="popup-4">
+            <div class="popup-container">
+              <button id="close-popup-btn-4" class="close-button">X</button>
+              <h2>
+                <span class="highlight">ITER</span>
+                elbilsappen för smidigare laddning
+              </h2>
+              <p>
+                Hifi prototyp för en elbilsapp som hjälper elbilsägare hitta
+                laddstationer och planera rutter. Utvecklad i Figma.
+              </p>
+              <p>Nedan visas resultat</p>
+              <video id="iterVideo" controls>
+                <source src="Images/Iter.mov" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
           <p class="projectText">Ararat Pizzeria</p>
-          <a onclick="openPopup()"> <img src="Images/Bild15.png" /> </a>
-          <div class="popup" id="popup">
-            <div popup-container>
-              <button onclick="closePopup()" class="close-button">X</button>
+          <a id="open-popup-btn-5"> <img src="Images/Bild15.png" /> </a>
+          <div class="popup" id="popup-5">
+            <div class="popup-container">
+              <button id="close-popup-btn-5" class="close-button">X</button>
               <h2>
                 Hemsida för restaurang
                 <span class="highlight">Ararat Pizzera</span>
@@ -227,19 +328,15 @@
                 Wordpress.
               </p>
               <p>Nedan visas resultat</p>
-              <video id="video" controls>
+              <video id="AraratVideo" controls>
                 <source src="Images/Film1.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
-        </div>
-        <div class="project1">
-          <p class="projectText">Kommer snart</p>
-          <img src="Images/Bild17.png" />
         </div>
       </div>
     </section>
 
-    <script src="Portfolio2/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
