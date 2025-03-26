@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Andra scriptet för kursinformation och modal-----------------------------------------------------
+// Andra scriptet för kursinformation och modal----------------------------------------------------
 const courseInfo = {
     1: {
       title:
@@ -149,31 +149,29 @@ document.addEventListener("DOMContentLoaded", function() {
     let popup = document.getElementById(popupId);
     let video = popup.querySelector("video");
     if (video) {
-      video.pause(); // Pausa videon när popup stängs
+      video.pause(); 
     }
     popup.classList.remove("open-popup");
   }
 
-  // Lägg till event-lyssnare för alla "open-popup-btn"-knappar
+  // Lägg till eventlyssnare för öppna popups
   openPopupBtns.forEach(function(btn) {
     btn.addEventListener("click", function() {
-      // Kontrollera om en popup redan är öppen, om så är fallet, stäng den först
       if (disable) {
-        return; // Om en popup är uppe, gör inget när man försöker öppna en annan
+        return; 
       }
 
       let popupId = btn.id.replace("open-popup-btn", "popup");
       openPopup(popupId);
-      disable = true; // Markera att en popup är öppen
+      disable = true; 
     });
   });
 
-  // Lägg till event-lyssnare för alla "close-popup-btn"-knappar
   closePopupBtns.forEach(function(btn) {
     btn.addEventListener("click", function() {
       let popupId = btn.id.replace("close-popup-btn", "popup");
       closePopup(popupId);
-      disable = false; // Sätt disable till false när popupen stängs
+      disable = false;
     });
   });
 });
